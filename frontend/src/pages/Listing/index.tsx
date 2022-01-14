@@ -25,6 +25,7 @@ function Listing() {
         axios.get(`${BASE_URL}/movies?size=12&page=${pageNumber}`)
             .then(response => {
                 const data = response.data as MoviePage;
+                console.log(response.data)
                 setPage(data)
             });
     }, [pageNumber]);
